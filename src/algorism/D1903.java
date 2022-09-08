@@ -20,22 +20,30 @@ public class D1903 {
             for(int i=0;i<width;i++){
                 arr[x][y] = num;
                 x++; num++;
-            } width--; y++; // 4,1
+            } width--; x--; y++; // 4,1
+//            System.out.println(width);
+//            System.out.println(x);
+//            System.out.println(y);
 
             for(int i=0;i<width;i++){
                 arr[x][y]=num;
                 y++; num++; // 4,4
-            }x--;
+            }x--; y--;
 
             for(int i=0;i<width;i++){
-                arr[x][y]=25;
+                arr[x][y]=num;
                 x--; num++; //0.4
-            } width--; y--;
+            } width--; y--; x++;
 
             for(int i=0;i<width;i++){
-                arr[x][y]=25;
+                arr[x][y]=num;
                 y--; num++; //0.1
-            } x++;
+            } x++; y++;
+        }
+        for(int i=0;i<5;i++){
+            for(int j=0;j<5;j++){
+                System.out.print(arr[i][j]+" ");
+            }
         }
     }
 }
